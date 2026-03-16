@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body class=" container mt-5 border rounded-4 p-4 shadow-lg bg-light" style="max-width: 600px; width: 100%;"> <!--container mt-5 border centers the container-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>agentui</title>
+    </head>
+    <h1 class="fw-bold">SAKIBU's AGENT</h1>
+    <section class="mb-4">
+    <form action="/chat" method="POST">
+        <div>
+            <p><em><strong>CHAT AREA</strong></em></p>
+            <label><em>Chat</em></label>
+            <input name="chat" id="chat" required class="form-control mb-2" style=width:400px;></input> <!-- could use required style="width:400px; height:40px;" in HTML-->
+            <!-- Or I could use <textarea name="chat" id="chat" required style="width:400px; height:40px"></textarea> -->
+            <button name="submit" class="btn btn-primary">GO!</button>
+        </div>   
+    </form>
+    </section>
+    <section>
+         <p><strong><em>RESPONSE AREA</em></strong><p> 
+        <label><em>Response</em></label>
+        <div class="border rounded p-3" style="border: solid black; width: 400px; padding:20px; min-height: 40px;"><!--min-height means the box grows as text increases-->
+        <p>{{ response if response else "No response yet!!!" }}</p>
+        </div>
+    </section>
+</body>
+</html>
